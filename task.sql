@@ -16,6 +16,7 @@ CREATE TABLE GeoIPCache (
     PRIMARY KEY (ID)
 ) ENGINE=MEMORY;
 -- Create a table for storing product descriptions for different countries (Columns: ID, CountryID, ProductID, Description )
+-- MyISAM: read-heavy table, data is stored on disk and survives a server restart (test.sql requires MyISAM)
 CREATE TABLE ProductDescription (
     ID INT,
     Description TEXT,
